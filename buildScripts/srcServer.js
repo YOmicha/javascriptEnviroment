@@ -32,3 +32,14 @@ app.listen(port, function(err){
     open('http:/localhost:' + port);
   }
 });
+
+
+//api simulation
+
+app.get('/users', function(req, res){
+  res.json([
+    {"id":1, "firstName":"BobA", "lastName":"SmithA","email":"m@m.com"},
+    {"id":2, "firstName":"BobB", "lastName":"SmithB","email":"n@n.com"},
+    {"id":3, "firstName":"BobC", "lastName":"SmithC","email":"n@n.com"}
+  ]);
+});
